@@ -25,4 +25,5 @@ jobs:
         envFileName: 'environment.yml'
 
     - name: run unit tests
-      run: pytest tests
+      run: |
+        pytest tests
