@@ -15,11 +15,13 @@ jobs:
       uses: fdiblen/anaconda-action@0.1.7
       with:
         env-file-name: 'environment.yml'
+        env-name: 'rga'
+        activate-env: true
                 
     - name: run unit tests
       shell: bash -l {0}
       run: |
-        conda install pytest
-        $CONDA/bin/pytest
+        pytest
+        
       
       
