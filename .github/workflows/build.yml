@@ -15,7 +15,12 @@ jobs:
       uses: fdiblen/anaconda-action@0.1.7
       with:
         env-file-name: 'environment.yml'
-
+        
+    - name: build
+      shell: bash -l {0}
+      run: |
+        pip install -e .
+          
     - name: run unit tests
       shell: bash -l {0}
       run: pytest
