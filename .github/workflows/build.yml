@@ -17,5 +17,5 @@ jobs:
         env-file-name: 'environment.yml'
 
     - name: run unit tests
-      run: |
-        pytest test_to_EUR.py
+      run: pytest
+        
