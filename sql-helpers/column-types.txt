@@ -1,0 +1,50 @@
+Table('EmployeeRoster', MetaData(bind=None),
+ 
+Column('User_ID', BIGINT(), table=<EmployeeRoster>), 
+Column('Email_ID', BIGINT(), table=<EmployeeRoster>), 
+Column('Title', BIGINT(), table=<EmployeeRoster>), 
+Column('Fullname', VARCHAR(collation='SQL_Latin1_General_CP1_CI_AS'), table=<EmployeeRoster>), 
+Column('Department', VARCHAR(collation='SQL_Latin1_General_CP1_CI_AS'), table=<EmployeeRoster>), 
+Column('Gender', VARCHAR(collation='SQL_Latin1_General_CP1_CI_AS'), table=<EmployeeRoster>), 
+Column('Office', BIGINT(), table=<EmployeeRoster>), 
+Column('Region', BIGINT(), table=<EmployeeRoster>), 
+Column('Tenure_Yrs', FLOAT(precision=53), table=<EmployeeRoster>), 
+Column('Seniority', BIGINT(), table=<EmployeeRoster>), 
+Column('Rating', BIGINT(), table=<EmployeeRoster>), 
+Column('Survey_Score', FLOAT(precision=53), table=<EmployeeRoster>), 
+Column('Promotion', BIGINT(), table=<EmployeeRoster>), 
+Column('Avg_Hrs', FLOAT(precision=53), table=<EmployeeRoster>), 
+Column('salary_usd', FLOAT(precision=53), table=<EmployeeRoster>), schema=None)
+
+
+
+Table('Emails', MetaData(bind=None), 
+Column('from_ID', BIGINT(), table=<Emails>), 
+Column('to_ID', BIGINT(), table=<Emails>), schema=None)
+
+
+
+Table('Hours', MetaData(bind=None), 
+Column('Date', DATETIME(), table=<Hours>), 
+Column('UserId', BIGINT(), table=<Hours>), 
+Column('AdminHrs1', FLOAT(precision=53), table=<Hours>), 
+Column('AdminHrs2', FLOAT(precision=53), table=<Hours>), 
+Column('AdminHrs3', FLOAT(precision=53), table=<Hours>), 
+Column('ClientHrs1', FLOAT(precision=53), table=<Hours>), 
+Column('ClientHrs2', FLOAT(precision=53), table=<Hours>), 
+Column('ClientHrs3', FLOAT(precision=53), table=<Hours>), 
+Column('TargetClientHrs', FLOAT(precision=53), table=<Hours>), schema=None)
+
+
+
+Table('Skills', MetaData(bind=None), 
+Column('UserId', BIGINT(), table=<Skills>), 
+Column('Fullname', VARCHAR(collation='SQL_Latin1_General_CP1_CI_AS'), table=<Skills>), 
+Column('Department', VARCHAR(collation='SQL_Latin1_General_CP1_CI_AS'), table=<Skills>), 
+Column('Gender', VARCHAR(collation='SQL_Latin1_General_CP1_CI_AS'), table=<Skills>), 
+Column('Attribute Group', VARCHAR(collation='SQL_Latin1_General_CP1_CI_AS'), table=<Skills>), 
+Column('Attribute Sub-Group', VARCHAR(collation='SQL_Latin1_General_CP1_CI_AS'), table=<Skills>), 
+Column('Attribute Type', VARCHAR(collation='SQL_Latin1_General_CP1_CI_AS'), table=<Skills>), 
+Column('Attribute Name', VARCHAR(collation='SQL_Latin1_General_CP1_CI_AS'), table=<Skills>), 
+Column('Attribute Level', BIGINT(), table=<Skills>), 
+Column('Attribute Verified', BIT(), table=<Skills>), schema=None)

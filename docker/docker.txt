@@ -1,0 +1,25 @@
+# pull SQL Server 2019 image
+docker pull mcr.microsoft.com/mssql/server:2019-latest
+
+# create a container with the SQL Sever data base
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
+   -p 1433:1433 --name sql1 -h sql1 \
+   -d mcr.microsoft.com/mssql/server:2019-latest
+
+# start the container
+docker start sql1
+
+# enable bash
+docker exec -it sql1 "bash"
+
+# connect to the created DB 
+# (user is SA and password is "<YourStrong@Passw0rd>" )
+/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "<YourStrong@Passw0rd>"
+
+# backup database
+/opt/mssql-tools/bin/sqlcmd -S 127.0.0.1,1433 -U SA -P "<YourStrong@Passw0rd>" -H 127.0.0.1,1433 -Q "BACKUP DATABASE rga TO DISK='/var/opt/mssql/backup/rga.bak'" 
+
+# copy backup file from docker container to host
+# 89dfc81ae200 is the docker container ID and /jm is a folder in my home
+docker cp 89dfc81ae200:/var/opt/mssql/backup/rga.bak /home/jm/
+
