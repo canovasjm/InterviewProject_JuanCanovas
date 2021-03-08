@@ -1,3 +1,5 @@
+[![Run tests in Miniconda](https://github.com/canovasjm/InterviewProject_JuanCanovas/actions/workflows/build.yml/badge.svg)](https://github.com/canovasjm/InterviewProject_JuanCanovas/actions/workflows/build.yml)
+
 # Set up  
 
 First, clone the repository: 
@@ -37,6 +39,8 @@ Python script to query [fixer.io](https://fixer.io/) API and convert salary curr
 * set an environment variable called `API_KEY_FIXER` and use the script as is      
 * comment line #34 and hardcode the key in line #35  
 
+Two methods are defined in file helpers.py: `to_EUR()` and `to_USD()`. Since the free subscription API key works only with base Euro, `to_EUR()` converts all the currencies to Euro and then `to_USD()` converts Euro to US Dollar.
+
 ## :open_file_folder: `task2`  
 
 Create the data base from scratch by running the scripts **in order**. SQL scripts create/alter tables and relationships, while python scripts upload the data to the tables once they are created.
@@ -51,7 +55,7 @@ Written report with findings/recommendations.
 
 ## :open_file_folder: `tests`  
 
-Unit tests for helper methods defined in task1.  
+Unit tests for helper methods defined in [task1](https://github.com/canovasjm/InterviewProject_JuanCanovas#open_file_folder-task1). These tests run on pull using GitHub Actions.
 
 # Miscellaneous  
 
