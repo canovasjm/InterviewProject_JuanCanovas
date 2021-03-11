@@ -25,12 +25,18 @@ jobs:
       
       - name: run pytest
         shell: bash -l {0}
-        run: pytest
+        run: |
+          conda install pytest-cov
+          pytest --cov=./ --cov-report=xml
 
       - name: upload coverage to codecov
         uses: codecov/codecov-action@v1
         with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage.xml
+          directory: ./coverage/reports/
           name: codecov-umbrella # optional
           fail_ci_if_error: false # optional (default = false)
           verbose: true # optional (default = false)    
+          path_to_write_report: ./coverage/codecov_report.txt
             

@@ -1,4 +1,4 @@
-[![Run tests in Miniconda](https://github.com/canovasjm/InterviewProject_JuanCanovas/actions/workflows/build.yml/badge.svg)](https://github.com/canovasjm/InterviewProject_JuanCanovas/actions/workflows/build.yml)
+[![Run tests in Miniconda](https://github.com/canovasjm/InterviewProject_JuanCanovas/actions/workflows/build.yml/badge.svg)](https://github.com/canovasjm/InterviewProject_JuanCanovas/actions/workflows/build.yml) [![codecov](https://codecov.io/gh/canovasjm/InterviewProject_JuanCanovas/branch/main/graph/badge.svg?token=C8TDCLZSX2)](https://codecov.io/gh/canovasjm/InterviewProject_JuanCanovas)
 
 # Set up  
 
@@ -18,7 +18,7 @@ To activate the environment type:
 
 ## :open_file_folder: `backup`
 
-A backup for the SQL Server data base created in task2. This comes in handy in case you need to restore the data base.
+A backup for the SQL Server data base created in [task2](https://github.com/canovasjm/InterviewProject_JuanCanovas#open_file_folder-task2). This comes in handy in case you need to restore the data base.
 
 ## :open_file_folder: `datasources`
 
@@ -37,7 +37,7 @@ Messy list of queries used for debugging and testing. Use with caution since som
 Python script to query [fixer.io](https://fixer.io/) API and convert salary currencies to USD. You will need an API key; get yours [here](https://fixer.io/product). To run the script with your key do one of the following:
 
 * set an environment variable called `API_KEY_FIXER` and use the script as is      
-* comment line #34 and hardcode the key in line #35  
+* comment line #34 and hardcode your key in line #35  
 
 Two methods are defined in file helpers.py: `to_EUR()` and `to_USD()`. Since the free subscription API key works only with base Euro, `to_EUR()` converts all the currencies to Euro and then `to_USD()` converts Euro to US Dollar.
 
