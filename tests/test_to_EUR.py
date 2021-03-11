@@ -31,7 +31,7 @@ def test_euro_conversion():
     # values
     actual = np.array(conversion_df['salary_eur'])
     expected = np.array([1/0.854382, 1/1.067218, 1/3.323288, 1/1.403282])
-    message1 = "to_EUR(df) should return the a data frame, but it actually returned {0}".format(str(type(conversion_df)))
+    message1 = "to_EUR(df) should return a data frame, but it actually returned {0}".format(str(type(conversion_df)))
     message2 = "Error in the logic of currency conversion"
     
     # assert statements
