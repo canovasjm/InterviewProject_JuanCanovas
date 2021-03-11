@@ -48,9 +48,8 @@ class Helper:
         for i in df.index:
             salary_usd.append(df['salary_eur'][i] * self.rates['USD'])
             
-        # add 'salary_eur' as a new column in df   
+        # add 'salary_usd' as a new column in df   
         df['salary_usd'] = salary_usd
         
         # return df with the new column    
         return df
-    
